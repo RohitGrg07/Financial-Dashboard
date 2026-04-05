@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 10% 12%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 224 10% 12%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 224 10% 12%;
+
+    --primary: 160 60% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 93%;
+    --secondary-foreground: 220 10% 40%;
+
+    --muted: 220 14% 95%;
+    --muted-foreground: 215 12% 45%;
+
+    --accent: 220 14% 92%;
+    --accent-foreground: 224 10% 15%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 160 60% 38%;
+
+    --radius: 0.75rem;
+
+    --income: 160 60% 38%;
+    --expense: 0 72% 50%;
+    --warning: 38 92% 50%;
+    --info: 217 91% 55%;
+
+    --chart-1: 160 60% 38%;
+    --chart-2: 217 91% 55%;
+    --chart-3: 280 65% 55%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 72% 50%;
+    --chart-6: 190 70% 45%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 224 10% 12%;
+    --sidebar-primary: 160 60% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 224 10% 15%;
+    --sidebar-border: 220 13% 88%;
+    --sidebar-ring: 160 60% 38%;
+
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .dark {
+    --background: 225 15% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 225 14% 11%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 225 14% 11%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 160 60% 45%;
+    --primary-foreground: 225 15% 8%;
+
+    --secondary: 225 12% 16%;
+    --secondary-foreground: 210 15% 75%;
+
+    --muted: 225 12% 14%;
+    --muted-foreground: 215 12% 50%;
+
+    --accent: 225 12% 18%;
+    --accent-foreground: 210 20% 90%;
+
+    --destructive: 0 72% 56%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 225 10% 18%;
+    --input: 225 10% 18%;
+    --ring: 160 60% 45%;
+
+    --income: 160 60% 45%;
+    --expense: 0 72% 56%;
+    --warning: 38 92% 55%;
+    --info: 217 91% 60%;
+
+    --chart-1: 160 60% 45%;
+    --chart-2: 217 91% 60%;
+    --chart-3: 280 65% 60%;
+    --chart-4: 38 92% 55%;
+    --chart-5: 0 72% 56%;
+    --chart-6: 190 70% 50%;
+
+    --sidebar-background: 225 14% 11%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 160 60% 45%;
+    --sidebar-primary-foreground: 225 15% 8%;
+    --sidebar-accent: 225 12% 18%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 225 10% 18%;
+    --sidebar-ring: 160 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+
+  .gradient-income {
+    background: linear-gradient(135deg, hsl(var(--income)) 0%, hsl(var(--income) / 0.7) 100%);
+  }
+
+  .gradient-expense {
+    background: linear-gradient(135deg, hsl(var(--expense)) 0%, hsl(var(--expense) / 0.7) 100%);
+  }
+
+  .text-income {
+    color: hsl(var(--income));
+  }
+
+  .text-expense {
+    color: hsl(var(--expense));
+  }
+
+  .text-warning {
+    color: hsl(var(--warning));
+  }
+
+  .bg-income\/10 {
+    background-color: hsl(var(--income) / 0.1);
+  }
+
+  .bg-expense\/10 {
+    background-color: hsl(var(--expense) / 0.1);
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
